@@ -1,20 +1,17 @@
 
 body  {
-    font-family: Arial, sans-serif;
+  background: linear-gradient(to right, #e0f7fa, #e1bee7);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f7fa;
-    background: linear-gradient(to bottom, #04192b, #6f8ba1, #c2d8ea);
    
 }
 
 .page-title {
+     color: #4527a0;
     text-align: center;
-    font-size: 2.5rem;
-    font-family: 'Poppins', sans-serif;
-    color: #4d4185;
-    color: #dfdaf3;
-    margin: 20px 0;
+    padding: 20px;
+    font-size: 2.5em;
 }
 
 
@@ -22,15 +19,15 @@ body  {
     display: flex;
     justify-content: center;
     margin: 20px 0;
-    gap: 10px;
-    border-radius: 20px;
+    gap: 15px;
+    border-radius: 5px;
 }
 
 .search-bar input {
     width: 300px;
     padding: 10px;
     border: 1px solid #ccc;
-    border-radius: 20px;
+    border-radius: px;
     font-size: 16px;
 }
 
@@ -56,19 +53,18 @@ body  {
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 20px;
     padding: 20px;
-    background-color: #80deea;
-      background: linear-gradient(to bottom, #0f5e2a, #36a44e, #80deea);
+    background-color: linear-gradient(to right, #e0f7fa, #e1bee7, #bbdefb);
+
 }
 
 
 .product-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    padding: 20px;
-    background-color: #80d8ff;
+      background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 15px;
+    margin: 20px;
+    text-align: center;
 }
 
 .product {
@@ -174,7 +170,7 @@ body  {
     background-color: #3a369c;
     color: #fff;
     border: none;
-    border-radius: 20px;
+    border-radius: px;
     cursor: pointer;
     font-size: 16px;
     margin-top: auto;
@@ -469,7 +465,7 @@ body  {
 .login-card {
     background-color: #ffffff;
     padding: 30px;
-    border-radius: 10px;
+    border-radius: 5px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     width: 100%;
     max-width: 400px;
@@ -533,7 +529,7 @@ body  {
     color: #fff;
     border: none;
     padding: 10px 20px;
-    border-radius: 20px;
+    border-radius: 5px;
     cursor: pointer;
     font-size: 1rem;
     transition: background-color 0.3s ease;
@@ -558,7 +554,7 @@ body  {
     text-decoration: underline;
 }
 
-/* Notification Styles */
+
 .notification {
  position: fixed;
     top: 20px;
@@ -581,11 +577,6 @@ body  {
     100% { opacity: 0; transform: translateY(-10px); }
 }
 
-
-
-   
-
-/* Product Page Styles */
 .product-page {
     display: flex;
     flex-direction: column;
@@ -660,7 +651,7 @@ body  {
 
 
 
-/* Reviews Section */
+
 .product-reviews {
     text-align: left;
     background-color: #ffffff;
@@ -707,15 +698,15 @@ body  {
     color: #555;
 }
 
-/* Container for Add to Cart and Go to Cart Buttons */
+
 .cart-buttons-container {
     display: flex;
-    justify-content: center; /* Center the buttons horizontally */
-    gap: 15px; /* Add space between the buttons */
-    margin-top: 20px; /* Add spacing above the buttons */
+    justify-content: center; 
+    gap: 15px; 
+    margin-top: 20px; 
 }
 
-/* Add to Cart Button */
+
 .add-to-cart-btn {
     background-color: #007BFF;
     color: white;
@@ -725,12 +716,12 @@ body  {
     cursor: pointer;
     font-size: 1rem;
     transition: background-color 0.3s ease;
-    flex: 1; /* Make both buttons the same width */
-    max-width: 200px; /* Optional: Limit the button width */
+    flex: 1; 
+    max-width: 200px; 
     text-align: center;
 }
 
-/* Go to Cart Button */
+
 .go-to-cart-btn {
     background-color: #28a745;
     color: white;
@@ -740,8 +731,8 @@ body  {
     cursor: pointer;
     font-size: 1rem;
     transition: background-color 0.3s ease;
-    flex: 1; /* Make both buttons the same width */
-    max-width: 200px; /* Optional: Limit the button width */
+    flex: 1; 
+    max-width: 200px; 
     text-align: center;
 }
 

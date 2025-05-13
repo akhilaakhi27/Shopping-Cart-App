@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { addToCart } from '../slices/cartSlice';
 import { useNavigate } from 'react-router-dom';
 import SearchComponent from '../components/SearchComponent';
-import bootstrap from 'bootstrap/dist/css/bootstrap.min.css';
+
 
 
 
