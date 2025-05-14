@@ -32,13 +32,13 @@ return (
             <h3>Featured Products</h3>
             <div className="products">
                 <div className="product-card">
-                    <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/kurta/t/d/l/l-yellow-paak-tabeedah-original-imah82rczuewtryb.jpeg?q=70" alt="Kurtha 1" />
+                    <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/ethnic-set/b/g/8/xl-grey-vindyavasini-original-imah28zhhzspwfnr.jpeg?q=70" alt="Kurtha 1" />
                     <h4>Floral Kurtha</h4>
                     <p>₹999</p>
                 </div>
                 <div className="product-card">
-                    <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/kurta/j/v/6/xxl-dtk-589-dk-fab-original-imahawsjezxfjb2u.jpeg?q=70" alt="Kurtha 2" />
-                    <h4>Elegant Black Kurtha</h4>
+                    <img src="https://rukminim2.flixcart.com/image/612/612/xif0q/ethnic-set/7/e/l/m-1025-shree-bdree-original-imah3hbnxy2negnb.jpeg?q=70" alt="Kurtha 2" />
+                    <h4>Elegant Green Kurtha</h4>
                     <p>₹1199</p>
                 </div>
                 
