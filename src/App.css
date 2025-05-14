@@ -1,6 +1,6 @@
 
 body  {
-  background: linear-gradient(to right, #e0f7fa, #e1bee7);
+  background: linear-gradient(to right,#d1005d,15%, #f1eef0);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
@@ -8,7 +8,7 @@ body  {
 }
 
 .page-title {
-     color: #4527a0;
+     color: #d52c86;
     text-align: center;
     padding: 20px;
     font-size: 2.5em;
@@ -458,7 +458,7 @@ body  {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #bbdefb;
+    background-color:#fff8f0;
     margin: 0;
 }
 

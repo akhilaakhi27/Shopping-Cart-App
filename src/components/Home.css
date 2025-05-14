@@ -22,12 +22,15 @@ body {
 
 .navbar {
   margin-top: 10px;
+  background-color: #d1005d;
+  padding: 10px 0;
+
 }
 
 .navbar a {
-  margin: 0 15px;
+  margin: 0 20px;
   text-decoration: none;
-  color: #d1005d;
+  color: #f1eef0;
   font-weight: bold;
 }
 
@@ -119,5 +122,27 @@ body {
   padding: 20px;
   margin-top: 40px;
   font-size: 0.9rem;
+}
+
+/* Logo Container Styles */
+.logo-container {
+    display: flex;
+    align-items: center; /* Vertically align the logo and store name */
+    gap: 15px; /* Add space between the logo and the store name */
+    padding: 10px 20px; /* Add padding around the logo container */
+}
+
+.logo {
+    width: 60px; /* Set a fixed width for the logo */
+    height: 60px; /* Set a fixed height for the logo */
+    object-fit: cover; /* Ensure the logo maintains its aspect ratio */
+    border-radius: 50%; /* Optional: Make the logo circular */
+}
+
+.store-name {
+    font-size: 1.8rem; /* Increase the font size for the store name */
+    font-weight: bold; /* Make the store name bold */
+    color: #d1005d; /* Set a dark color for the text */
+    text-transform: uppercase; /* Optional: Make the text uppercase */
 }
 

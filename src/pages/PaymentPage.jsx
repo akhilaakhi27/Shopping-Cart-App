@@ -25,7 +25,7 @@ function PaymentPage() {
 
     return (
         <div style={{ padding: '20px', maxWidth: '600px', margin: '0 auto' }}>
-            <h1>Payment Page</h1>
+            
             <div>
                 <h2>Order Summary</h2>
                 <ul>
