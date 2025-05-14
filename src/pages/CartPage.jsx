@@ -59,7 +59,7 @@ function CartPage() {
                             className="checkout-button"
                             onClick={() => navigate('/payment')}
                         >
-                            Proceed to Checkout
+                            Pay Now
                         </button>
                     </div>
                 </div>

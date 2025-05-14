@@ -1,0 +1,123 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fff8f0;
+  color: #333;
+}
+
+.homepage {
+  text-align: center;
+}
+
+.header {
+  background-color: #ffe0e0;
+  padding: 20px;
+}
+
+.store-name {
+  margin: 0;
+  font-size: 2.5rem;
+  color: #d1005d;
+}
+
+.navbar {
+  margin-top: 10px;
+}
+
+.navbar a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #d1005d;
+  font-weight: bold;
+}
+
+.navbar a:hover {
+  text-decoration: underline;
+}
+
+.hero {
+  padding: 60px 20px;
+  background: url('https://via.placeholder.com/1200x400') center/cover no-repeat;
+  color: white;
+  text-shadow: 2px 2px 4px #000;
+}
+
+.hero h2 {
+  font-size: 2.5rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin: 15px 0;
+}
+
+.shop-now {
+  background-color: #d1005d;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.shop-now a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  display: block;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  line-height: 1.5;}
+
+.shop-now:hover {
+  background-color: #a00047;
+}
+
+.featured {
+  padding: 40px 20px;
+  background-color: #fff;
+}
+
+.featured h3 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.products {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.product-card {
+  background-color: #fff0f5;
+  padding: 15px;
+  border-radius: 10px;
+  width: 200px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.product-card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.product-card h4 {
+  margin: 10px 0 5px;
+  color: #d1005d;
+}
+
+.product-card p {
+  margin: 0;
+  font-weight: bold;
+}
+
+.footer {
+  background-color: #ffe0e0;
+  padding: 20px;
+  margin-top: 40px;
+  font-size: 0.9rem;
+}
+

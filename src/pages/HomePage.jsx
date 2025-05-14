@@ -35,7 +35,7 @@ function HomePage() {
 
     return (
         <div className='home-page'>
-            <h1 className="page-title">Welcome to Kurta Store</h1>
+            <h1 className="page-title">Browse Our Collection</h1>
 
             {/* Search Bar */}
             <div className="search-container">
@@ -47,12 +47,7 @@ function HomePage() {
                     >
                         Login
                     </button>
-                    <button
-                        className="account-button"
-                        onClick={() => navigate('/account')}
-                    >
-                        Account
-                    </button>
+                   
                     <div className="cart-button-container">
                         <button
                             className="go-to-cart-button"
