@@ -24,9 +24,8 @@ function PaymentPage() {
     };
 
     return (
-        <div style={{ padding: '20px', maxWidth: '600px', margin: '0 auto' }}>
-            
-            <div>
+        <div className="payment-page-container">
+            <div className="order-summary">
                 <h2>Order Summary</h2>
                 <ul>
                     {cartItems.map(item => (
@@ -37,81 +36,65 @@ function PaymentPage() {
                 </ul>
                 <h3>Total Amount: ₹{totalAmount}</h3>
             </div>
-            <div style={{ marginBottom: '20px' }}>
-                <label htmlFor="deliveryAddress" style={{ display: 'block', marginBottom: '10px' }}>
+            <div>
+                <label htmlFor="deliveryAddress" className="payment-label">
                     Delivery Address:
                 </label>
                 <textarea
                     id="deliveryAddress"
+                    className="payment-textarea"
                     value={deliveryAddress}
                     onChange={(e) => setDeliveryAddress(e.target.value)}
                     placeholder="Enter your delivery address"
-                    style={{ width: '100%', padding: '10px', fontSize: '16px' }}
                 />
             </div>
-            <div style={{ marginBottom: '20px' }}>
-                <label style={{ display: 'block', marginBottom: '10px' }}>Payment Mode:</label>
-                <div>
-                    <label>
-                        <input
-                            type="radio"
-                            name="paymentMode"
-                            value="Credit Card"
-                            onChange={(e) => setPaymentMode(e.target.value)}
-                        />
-                        Credit Card
-                    </label>
-                </div>
-                <div>
-                    <label>
-                        <input
-                            type="radio"
-                            name="paymentMode"
-                            value="Debit Card"
-                            onChange={(e) => setPaymentMode(e.target.value)}
-                        />
-                        Debit Card
-                    </label>
-                </div>
-                <div>
-                    <label>
-                        <input
-                            type="radio"
-                            name="paymentMode"
-                            value="Net Banking"
-                            onChange={(e) => setPaymentMode(e.target.value)}
-                        />
-                        Net Banking
-                    </label>
-                </div>
-                <div>
-                    <label>
-                        <input
-                            type="radio"
-                            name="paymentMode"
-                            value="Cash on Delivery"
-                            onChange={(e) => setPaymentMode(e.target.value)}
-                        />
-                        Cash on Delivery
-                    </label>
-                </div>
+            <div className="payment-modes">
+                <div className="payment-label">Payment Mode:</div>
+                <label>
+                    <input
+                        type="radio"
+                        name="paymentMode"
+                        value="Credit Card"
+                        onChange={(e) => setPaymentMode(e.target.value)}
+                    />
+                    Credit Card
+                </label>
+                <label>
+                    <input
+                        type="radio"
+                        name="paymentMode"
+                        value="Debit Card"
+                        onChange={(e) => setPaymentMode(e.target.value)}
+                    />
+                    Debit Card
+                </label>
+                <label>
+                    <input
+                        type="radio"
+                        name="paymentMode"
+                        value="Net Banking"
+                        onChange={(e) => setPaymentMode(e.target.value)}
+                    />
+                    Net Banking
+                </label>
+                <label>
+                    <input
+                        type="radio"
+                        name="paymentMode"
+                        value="Cash on Delivery"
+                        onChange={(e) => setPaymentMode(e.target.value)}
+                    />
+                    Cash on Delivery
+                </label>
             </div>
             <button
                 onClick={handlePlaceOrder}
-                style={{
-                    padding: '10px 20px',
-                    fontSize: '16px',
-                    backgroundColor: '#007BFF',
-                    color: '#fff',
-                    border: 'none',
-                    borderRadius: '5px',
-                    cursor: 'pointer',
-                }}
+                className="place-order-btn"
             >
                 Place Order
             </button>
             {orderPlaced && (
-                <p style={{ color: 'green', marginTop: '20px' }}>
+                <p className="order-success">
                     Your order has been placed successfully! Redirecting to home page...
                 </p>
             )}

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { addToCart } from '../slices/cartSlice';
-
+import './ProductPage.css'; // Assuming you have a CSS file for styling
 
 function ProductPage() {
     const { id } = useParams();
@@ -12,15 +12,13 @@ function ProductPage() {
     const dispatch = useDispatch();
     const navigate = useNavigate();
 
-    const [selectedSize, setSelectedSize] = useState(null); // State for selected size
+    const [selectedSize, setSelectedSize] = useState(null);
 
     if (!product) {
         return <p>Product not found!</p>;
     }
 
-    const handleSizeClick = (size) => {
-        setSelectedSize(size);
-    };
+    const handleSizeClick = (size) => setSelectedSize(size);
 
     const handleAddToCart = () => {
         if (!selectedSize) {
@@ -35,20 +33,14 @@ function ProductPage() {
         <div className="product-page">
             <div className="product-details">
                 <h1 className="product-title">{product.name}</h1>
-                <img
-                    src={product.image}
-                    alt={product.name}
-                    className="product-image"
-                />
+                <img src={product.image} alt={product.name} className="product-image" />
                 <p className="product-price">Price: ₹{product.price}</p>
                 <p className="product-material">Material: {product.material}</p>
                 <p className="product-description">{product.description}</p>
-
-                {/* Sizes Section */}
                 <div className="product-sizes">
                     <h3>Select Size:</h3>
                     <div className="sizes-container">
-                        {product.size?.map((size) => ( // Use optional chaining
+                        {product.sizes?.map((size) => (
                             <button
                                 key={size}
                                 className={`size-box ${selectedSize === size ? 'selected' : ''}`}
@@ -59,26 +51,11 @@ function ProductPage() {
                         ))}
                     </div>
                 </div>
-                
-
-                {/* Add to Cart and Go to Cart Buttons */}
-<div className="cart-buttons-container">
-    <button
-        className="add-to-cart-btn"
-        onClick={handleAddToCart}
-    >
-        Add to Cart
-    </button>
-    <button
-        className="go-to-cart-btn"
-        onClick={() => navigate('/cart')}
-    >
-        Go to Cart
-    </button>
-</div>
+                <div className="cart-buttons-container">
+                    <button className="add-to-cart-btn" onClick={handleAddToCart}>Add to Cart</button>
+                    <button className="go-to-cart-btn" onClick={() => navigate('/cart')}>Go to Cart</button>
+                </div>
             </div>
-
-            {/* Reviews Section */}
             <div className="product-reviews">
                 <h3>Customer Reviews</h3>
                 {product.reviews && product.reviews.length > 0 ? (

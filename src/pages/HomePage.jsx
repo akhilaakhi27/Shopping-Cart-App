@@ -4,10 +4,6 @@ import { addToCart } from '../slices/cartSlice';
 import { useNavigate } from 'react-router-dom';
 import SearchComponent from '../components/SearchComponent';
 
-
-
-
-
 function HomePage() {
     const products = useSelector(state => state.products.products); 
     const cartItems = useSelector(state => state.cart.items); 
@@ -19,7 +15,9 @@ function HomePage() {
 
     const handleSearch = (searchTerm) => {
         const filtered = products.filter(product =>
-            product.name.toLowerCase().includes(searchTerm.toLowerCase())
+            product.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+            product.material.toLowerCase().includes(searchTerm.toLowerCase()) ||
+            product.description.toLowerCase().includes(searchTerm.toLowerCase())
         );
         setFilteredProducts(filtered);
     };
@@ -27,46 +25,27 @@ function HomePage() {
     const handleAddToCart = (product) => {
         dispatch(addToCart(product)); 
         setNotification(`${product.name} added to cart!`); 
-
-        setTimeout(() => {
-            setNotification('');
-        }, 3000);
+        setTimeout(() => setNotification(''), 3000);
     };
 
     return (
         <div className='home-page'>
-            <h1 className="page-title">Browse Our Collection</h1>
-
-            {/* Search Bar */}
+            <h1 className="page-title">Welcome to Kurta Store</h1>
             <div className="search-container">
                 <SearchComponent onSearch={handleSearch} />
                 <div className="action-buttons">
-                    <button
-                        className="login-button"
-                        onClick={() => navigate('/login')}
-                    >
-                        Login
-                    </button>
-                   
+                    <button className="login-button" onClick={() => navigate('/login')}>Login</button>
+                    
                     <div className="cart-button-container">
-                        <button
-                            className="go-to-cart-button"
-                            onClick={() => navigate('/cart')}
-                        >
-                            🛒
-                        </button>
+                        <button className="go-to-cart-button" onClick={() => navigate('/cart')}>🛒</button>
                         <span className="cart-count">{cartItems.length}</span>
                     </div>
                 </div>
             </div>
-
-            {/* Notification */}
             {notification && <div className="notification">{notification}</div>}
-
-            {/* Product List */}
-            <div className="product-list-container">
+            <div className="product-list">
                 {filteredProducts.length === 0 ? (
-                    <p className="no-resultS">Sorry!!! No matching Product found.</p>
+                    <p className="no-results">Sorry!!! No matching Product found.</p>
                 ) : (
                     filteredProducts.map(product => (
                         <div key={product.id} className="product">

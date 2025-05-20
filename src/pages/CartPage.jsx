@@ -2,6 +2,7 @@ import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { removeFromCart, increaseQuantity, decreaseQuantity } from '../slices/cartSlice';
 import { useNavigate } from 'react-router-dom';
+import './CartPage.css'; // Assuming you have a CSS file for styling
 
 function CartPage() {
     const cartItems = useSelector(state => state.cart.items);
