@@ -128,7 +128,7 @@ body {
 }
 
 .footer {
-  background-color: #ffe0e0;
+  background-color: #050505;
   padding: 20px;
   margin-top: 40px;
   font-size: 0.9rem;
@@ -143,8 +143,8 @@ body {
 }
 
 .logo {
-    width: 60px; /* Set a fixed width for the logo */
-    height: 60px; /* Set a fixed height for the logo */
+    width: 180px; /* Set a fixed width for the logo */
+    height: 180px; /* Set a fixed height for the logo */
     object-fit: cover; /* Ensure the logo maintains its aspect ratio */
     border-radius: 50%; /* Optional: Make the logo circular */
 }
